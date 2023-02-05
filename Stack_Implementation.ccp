@@ -1,7 +1,7 @@
 #include <iostream>
 using namespace std;
 const int Max_Size = 150;
-template <class T>  //to allow the array to receive any data type.
+template <class T>  //to allow the stack to receive any data type.
 class Stack {
 	int Top;		//represent the index of the stack.
 	int Item[Max_Size];
@@ -10,9 +10,9 @@ public:
 	{
 		Top = -1;
 	}
-	void Push(T Element)  //to add elements into the array.
+	void Push(T Element)  //to add elements into the stack.
 	{
-		if (Top >= Max_Size - 1)   //to check if the sstack is full, (Max_Size-1) beacuse the array index start at 0.
+		if (Top >= Max_Size - 1)   //to check if the sstack is full, (Max_Size-1) beacuse the stack index start at 0.
 		{
 			cout << "Stack Full On Push.";
 		}
@@ -45,7 +45,7 @@ public:
 
 	}
 
-	void GetTop(T& StackTop)  //to get the top element in the array.
+	void GetTop(T& StackTop)  //to get the top element in the stack.
 	{
 		if (IsEmpty())
 			cout << "Stack Empty On Pop.";
@@ -55,7 +55,7 @@ public:
 		}
 	}
 
-	void Print()		//to print all the array element.
+	void Print()		//to print all the stack element.
 	{
 		cout << "[";
 		for (int i = Top; i >= 0; i--)
